@@ -32,5 +32,7 @@ services:
       POSTGRES_PASSWORD: password
     volumes:  
       - db:/var/lib/postgresql/data
+      - ./postgres/backup-tictactoe.sql:/backup-tictactoe.sql
+      - ./postgres/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
 volumes:
   db:
