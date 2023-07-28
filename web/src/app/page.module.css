@@ -1,7 +1,12 @@
+.page {
+  min-width: 820px;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   width: 800px;
+  padding: 0 10px;
   margin-bottom: 100px;
 }
 

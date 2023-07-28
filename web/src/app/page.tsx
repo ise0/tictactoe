@@ -60,8 +60,8 @@ export default function Home() {
 
 
   useEffect(() => {
-    if (!fetchFindMatch || !ws) return
     if (game) return setFetchFindMatch(false)
+    if (!fetchFindMatch || !ws) return
 
     const fetchMatch = () => {
       if (user) {
@@ -79,8 +79,6 @@ export default function Home() {
     ws.addEventListener('close', () => setFetchFindMatch(true))
     setFetchFindMatch(false)
   }, [ws, fetchFindMatch, user, game])
-
-  useEffect(() => { }, [fetchFindMatch])
 
   return (
     <div className={styles['page']}>
