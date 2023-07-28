@@ -48,16 +48,24 @@ export function wsReducer(data: Ctx, ev: MessageEvent<any>): Ctx {
     switch (a.type) {
         case 'game/game':
             return { ...data, game: { ...a.data, winner: 0 } }
-        case 'game/gameBoard':
+        case 'game/gameBoard': {
             let user = data.user
             if (a.data.winner != 0 && user && !user.isAnonym) {
-                let rating = user.rating + user.id === a.data.winner ? 100 : -100;
+                let rating = user.rating + (user.id === a.data.winner ? 100 : -100);
                 rating = rating < 0 ? 0 : rating
                 user = { ...user, rating }
             }
             return { ...data, game: data.game ? { ...data.game, ...a.data } : undefined, user }
-        case 'game/timeExpired':
-            return { ...data, game: data.game ? { ...data.game, ...a.data } : undefined }
+        }
+        case 'game/timeExpired': {
+            let user = data.user
+            if (a.data.winner != 0 && user && !user.isAnonym) {
+                let rating = user.rating + (user.id === a.data.winner ? 100 : -100);
+                rating = rating < 0 ? 0 : rating
+                user = { ...user, rating }
+            }
+            return { ...data, game: data.game ? { ...data.game, ...a.data } : undefined, user }
+        }
         case 'game/chatMsg':
             if (!data.game) return data
             const newChat = [...data.game.chat, { ...a.data, ts: Date.now() }]
