@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin-bottom: 100px;
+}
+
+.timer {
+  font-size: 22px;
+}
+
+.chat {
+  margin-left: 40px;
+}
+
+.main {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.find-btn {
+  cursor: pointer;
+  padding: 10px 24px;
+  background-color: rgb(54, 183, 54);
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  padding: 10px 24px;
+  background-color: rgb(247, 34, 34);
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.opponent {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+

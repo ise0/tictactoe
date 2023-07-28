@@ -1,0 +1,27 @@
+.auth {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input__label {
+    margin-right: 5px;
+}
+
+.submit {
+    cursor: pointer;
+    display: block;
+    padding: 2px 15px;
+    margin: 0 auto;
+}

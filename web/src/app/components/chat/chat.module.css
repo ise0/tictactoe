@@ -1,0 +1,50 @@
+.chat {
+    position: relative;
+    width: 320px;
+    box-shadow: 0 0 10px #000;
+}
+
+.item {
+    max-width: 100%;
+    display: flex;
+    border-radius: 5px;
+    width: min-content;
+    margin: 5px;
+    padding: 5px;
+}
+
+.msg {
+    box-sizing: border-box;
+    max-width: 220px;
+    overflow-wrap: break-word;
+}
+
+.ts {
+    margin-left: 5px;
+}
+
+.item_me {
+    background-color: aqua;
+    margin-left: auto;
+}
+
+
+.item_opponent {
+    background-color: aquamarine;
+    margin-right: auto;
+}
+
+.msg-input {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.msg-ctrl {
+    flex-grow: 1;
+}
+
+.btn-send {
+    width: 48px;
+}

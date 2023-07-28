@@ -1,0 +1,17 @@
+.winner {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.winner_yes .text {
+    color: #1acd25;
+    font-size: 25px;
+    
+}
+
+.winner_no .text {
+    color: #ff0000;
+    font-size: 25px;
+}
