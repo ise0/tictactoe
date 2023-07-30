@@ -35,7 +35,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!game || game.winner != 0) return
-    setGameTimer(Math.floor(30 + (Date.now() - (game.lastMoveTs + serverTimeOffset)) / 1000))
+    setGameTimer(Math.floor(30 - (Date.now() - (game.lastMoveTs + serverTimeOffset)) / 1000))
     const i = setInterval(() => setGameTimer((v) => {
       if (v <= 0) {
         clearInterval(i)
