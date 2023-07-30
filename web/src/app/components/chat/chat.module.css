@@ -5,18 +5,13 @@
 }
 
 .item {
-    max-width: 100%;
+    width: max-content;
+    box-sizing: border-box;
+    max-width: 270px;
     display: flex;
     border-radius: 5px;
-    width: min-content;
     margin: 5px;
     padding: 5px;
-}
-
-.msg {
-    box-sizing: border-box;
-    max-width: 220px;
-    overflow-wrap: break-word;
 }
 
 .ts {
